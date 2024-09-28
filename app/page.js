@@ -18,7 +18,7 @@ export default function Home() {
             DialMinder helps you manage your time effectively. Create events,
             set your availability, and let others book time with you seamlessly.
           </p>
-          <Link href={"/dashboard"}>
+          <Link href="/dashboard">
             <Button size="lg" className="text-lg">
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -91,7 +91,7 @@ export default function Home() {
           Join thousands of professionals who trust DialMinder for efficient
           time management.
         </p>
-        <Link href={"/dashboard"}>
+        <Link href="/dashboard">
           <Button size="lg" variant="secondary" className="text-blue-600">
             Start For Free <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
