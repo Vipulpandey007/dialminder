@@ -9,9 +9,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { createBooking } from "@/actions/bookings";
-import { bookingSchema } from "@/app/lib/validators";
+
 import "react-day-picker/style.css";
 import useFetch from "@/hooks/use-fetch";
+import { bookingSchema } from "@/app/lib/validator";
 
 export default function BookingForm({ event, availability }) {
   const [selectedDate, setSelectedDate] = useState(null);

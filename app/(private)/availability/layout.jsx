@@ -4,7 +4,9 @@ export default function AvailabilityLayout({ children }) {
   return (
     <div className="mx-auto">
       {" "}
-      <Suspense fallback={<div>Loading events...</div>}>{children}</Suspense>
+      <Suspense fallback={<div>Loading availability...</div>}>
+        {children}
+      </Suspense>
     </div>
   );
 }
