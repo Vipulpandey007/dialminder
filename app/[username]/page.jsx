@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${user.name}'s Profile | Your App Name`,
+    title: `${user.name}'s Profile | DialMinder`,
     description: `Book an event with ${user.name}. View available public events and schedules.`,
   };
 }

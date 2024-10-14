@@ -2,14 +2,14 @@
 
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
-// import {
-//   startOfDay,
-//   addDays,
-//   format,
-//   parseISO,
-//   isBefore,
-//   addMinutes,
-// } from "date-fns";
+import {
+  startOfDay,
+  addDays,
+  format,
+  parseISO,
+  isBefore,
+  addMinutes,
+} from "date-fns";
 
 export async function getUserAvailability() {
   const { userId } = auth();
