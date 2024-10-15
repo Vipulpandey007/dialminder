@@ -12,6 +12,7 @@ import { BarLoader } from "react-spinners";
 import useFetch from "@/hooks/use-fetch";
 import { usernameSchema } from "../../lib/validator.js";
 import { getLatestUpdates } from "@/actions/dashboard";
+import { format } from "date-fns";
 
 export default function DashboardPage() {
   const { user, isLoaded } = useUser();
@@ -35,6 +36,8 @@ export default function DashboardPage() {
     data: upcomingMeetings,
     fn: fnUpdates,
   } = useFetch(getLatestUpdates);
+
+  console.log(upcomingMeetings);
 
   useEffect(() => {
     (async () => await fnUpdates())();
@@ -60,7 +63,7 @@ export default function DashboardPage() {
                   <ul className="list-disc pl-5">
                     {upcomingMeetings?.map((meeting) => (
                       <li key={meeting.id}>
-                        {meeting.event.title} on{" "}
+                        {meeting?.event?.title} on{" "}
                         {format(
                           new Date(meeting.startTime),
                           "MMM d, yyyy h:mm a"
